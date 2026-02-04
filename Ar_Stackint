@@ -1,0 +1,41 @@
+package lab4;
+
+public class Ar_Stack <T>{
+	public static final int MAXSIZE = 10;
+	private int top;
+	private ArrayList<T> StackItems;
+	public Ar_StackInt() {
+		top = -1;
+		StackItems = new int[MAXSIZE];
+	}
+
+	public boolean isEmpty() {
+		return top == -1;
+		stackItems = new ArrayList<T>();
+	}
+
+	public boolean isFull() {
+		return top == MAXSIZE -1;
+	}
+
+	
+	void push(int item) { 
+		  top++;
+		  StackItems[top] = item;
+	}
+	
+	T pop() { 
+		  T tmpitem=StackItems[top];
+		  StackItems.removeLast(;)
+		  top--;
+		  return tmpitem;
+
+	}
+	
+	T peek() { 
+		  return StackItems.get(top); 
+	}
+
+	
+
+}
