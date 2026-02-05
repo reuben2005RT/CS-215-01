@@ -1,0 +1,47 @@
+package Homework;
+
+//getmin
+public int getMin() {
+ if (head == null)
+     throw new RuntimeException("List is empty.");
+
+ Node curr = head;
+ int min = curr.info;
+
+ while (curr != null) {
+     if (curr.info < min)
+         min = curr.info;
+     curr = curr.next;
+ }
+ return min;
+}
+
+//same average as AR_Ulist
+public double getAverage() {
+ if (head == null)
+     throw new RuntimeException("List is empty.");
+
+ Node curr = head;
+ double sum = 0;
+
+ while (curr != null) {
+     sum += curr.info;
+     curr = curr.next;
+ }
+
+ return sum / length;
+}
+
+public LL_UList duplicateExponent(int exp) {
+ LL_UList newList = new LL_UList();
+
+ Node curr = head;
+ while (curr != null) {
+     int value = curr.info;
+     int powered = (int) Math.pow(value, exp);
+     newList.putItem(powered);
+     curr = curr.next;
+ }
+
+ return newList;
+}
