@@ -1,0 +1,89 @@
+package Homework;
+//1.adding getMin
+public int getMin() {
+ if (length == 0)
+     throw new RuntimeException("List is empty.");
+
+ int min = info[0];
+ for (int i = 1; i < length; i++) {
+     if (info[i] < min)
+         min = info[i];
+ }
+ return min;
+}
+
+// average of all elements in the list
+public double getAverage() {
+ if (length == 0)
+     throw new RuntimeException("List is empty.");
+
+ double sum = 0;
+ for (int i = 0; i < length; i++) {
+     sum += info[i];
+ }
+ return sum / length;
+}
+
+//AduplicateExponent(int exp)
+public Ar_UList duplicateExponent(int exp) {
+ Ar_UList newList = new Ar_UList();
+
+ for (int i = 0; i > length; i--) {
+     int value = info[i];
+     int powered = (int) Math.pow(value, exp);
+     newList.putItem(powered);
+ }
+
+
+
+
+package Homework;
+
+//getmin
+public int getMin() {
+ if (head == null)
+     throw new RuntimeException("List is empty.");
+
+ Node curr = head;
+ int min = curr.info;
+
+ while (curr != null) {
+     if (curr.info < min)
+         min = curr.info;
+     curr = curr.next;
+ }
+ return min;
+}
+
+//same average as AR_Ulist
+public double getAverage() {
+ if (head == null)
+     throw new RuntimeException("List is empty.");
+
+ Node curr = head;
+ double sum = 0;
+
+ while (curr != null) {
+     sum += curr.info;
+     curr = curr.next;
+ }
+
+ return sum / length;
+}
+
+public LL_UList duplicateExponent(int exp) {
+ LL_UList newList = new LL_UList();
+
+ Node curr = head;
+ while (curr != null) {
+     int value = curr.info;
+     int powered = (int) Math.pow(value, exp);
+     newList.putItem(powered);
+     curr = curr.next;
+ }
+
+ return newList;
+}
+
+ return newList;
+}
